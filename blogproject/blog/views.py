@@ -28,7 +28,7 @@ def login_view(request):
             messages.success(request, "logged in successfully")
             return redirect('home')
         else:
-            messages.error(request, "enter valid information")
+            messages.error(request, "please enter valid information")
     return render(request, 'login.html')
 
 def logout_view(request):
