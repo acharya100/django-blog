@@ -25,7 +25,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user:
             login(request, user)
-            messages.success(request, "logged in successfully")
+            messages.success(request, "you have logged in successfully")
             return redirect('home')
         else:
             messages.error(request, "please enter valid information")
