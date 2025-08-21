@@ -12,7 +12,7 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(request, "logged in successfully")
+            messages.success(request, "you have logged in successfully")
             return redirect('home')
     else:
         form = RegisterForm()
