@@ -41,10 +41,9 @@ def home_view(request):
     posts = list(Post.objects.all())
 
     def get_created_date(post):
-        return post.created
+        return post.created_at
 
     posts.sort(key=get_created_date)
-    posts.reverse()
 
     return render(request, 'home.html', {'posts': posts})
 
