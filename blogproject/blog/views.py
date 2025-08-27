@@ -33,7 +33,7 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    messages.info(request, "Logged out successfully.")
+    messages.info(request, "you have logged out successfully.")
     return redirect('login')
 
 @login_required
