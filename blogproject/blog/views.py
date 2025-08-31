@@ -12,7 +12,7 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(request, "you have logged in successfully")
+            messages.success(request, "You have logged in successfully")
             return redirect('home')
     else:
         form = RegisterForm()
@@ -25,7 +25,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user:
             login(request, user)
-            messages.success(request, "you have logged in successfully")
+            messages.success(request, "You have logged in successfully")
             return redirect('home')
         else:
             messages.error(request, "please enter valid information")
@@ -33,7 +33,7 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    messages.info(request, "you have logged out successfully.")
+    messages.info(request, "You have logged out successfully.")
     return redirect('login')
 
 @login_required
